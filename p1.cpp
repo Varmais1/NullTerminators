@@ -11,12 +11,15 @@ int main() {
   
   cin >> numOfSets;
 
+  int output[numOfSets];
+  
   for (int i = 0; i < numOfSets; i++) {
 
     counter = 0;
     cin >> numOfItems;
     char input[numOfItems];
     cin >> input;
+    cin.get();
     int arr[numOfItems];
 
     for (int i = 0; i < numOfItems; i++) {
@@ -36,9 +39,15 @@ int main() {
       }
       
     }
-    
-    cout << counter << endl;
 
+	   counter = output[i];
+	   
   }
+
+    for (int i = 0; i < numOfSets; i++) {
+      cout << output[i] << endl;
+    }
+
+  return 0;
   
 }
