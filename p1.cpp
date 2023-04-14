@@ -15,9 +15,15 @@ int main() {
 
     counter = 0;
     cin >> numOfItems;
+    char input[numOfItems];
+    cin >> input;
     int arr[numOfItems];
+
     for (int i = 0; i < numOfItems; i++) {
-      cin >> arr[i];
+	if (input[i] == ' ') {
+	  continue;
+	}
+	arr[i] = (int)(input[i]) - 48;
     }
     
     for (int a = 0; a < numOfItems; a++) {
