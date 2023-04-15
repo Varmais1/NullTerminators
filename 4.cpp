@@ -14,7 +14,7 @@ int main() {
   
   cin >> numOfSets;
 
-  float output[numOfSets];
+  double output[numOfSets];
   
   for (int i = 0; i < numOfSets; i++) {
 
@@ -22,7 +22,7 @@ int main() {
     q = 0;
     T = 0;
     result = 0;
-    float temp = 0;
+    //float temp = 0;
 
     cin >> N;
     cin >> q;
@@ -30,15 +30,15 @@ int main() {
     
     result = (log2(pow(N, q))) / (sqrt(abs(42 * sin(T))));
     
-    temp = round(result * 100.00) / 100.0;
+    //temp = round(result * 100.00) / 100.0;
 
-    output[i] = temp;
+    output[i] = result;
     
   }
 
   for (int i = 0; i < numOfSets; i++) {
 
-    cout << output[i] << endl;
+    cout << fixed << setprecision(2) << output[i] << endl;
     
   }
   
